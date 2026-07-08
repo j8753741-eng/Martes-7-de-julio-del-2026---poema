@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Si Siete Días Son El Precio De Extrañarte</title>
+<title>Cuando El Mundo Se Detiene, Mi Corazón Sigue Caminando Hacia Ti</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,9 +36,8 @@ linear-gradient(180deg,#060814,#0b1121,#141c33,#090d18);
 overflow-x:hidden;
 font-family:'Cormorant Garamond',serif;
 color:#f5f3ef;
-}
 
-/* ESTRELLAS */
+}
 
 body:before{
 
@@ -46,11 +45,11 @@ content:"";
 position:fixed;
 inset:0;
 pointer-events:none;
-background-image:
 
+background-image:
 radial-gradient(white 1px,transparent 1px),
-radial-gradient(rgba(255,255,255,.75) .8px,transparent .8px),
-radial-gradient(rgba(255,240,210,.9) 1px,transparent 1px);
+radial-gradient(rgba(255,255,255,.75).8px,transparent .8px),
+radial-gradient(rgba(255,240,210,.9)1px,transparent 1px);
 
 background-size:
 180px 180px,
@@ -80,8 +79,6 @@ transform:translateY(-220px);
 
 }
 
-/* CONSTELACIONES */
-
 .constellation{
 
 position:fixed;
@@ -95,12 +92,9 @@ linear-gradient(45deg,transparent 49.7%,rgba(255,255,255,.8)50%,transparent 50.3
 linear-gradient(-45deg,transparent 49.7%,rgba(255,255,255,.5)50%,transparent 50.3%);
 
 background-size:320px 320px;
-
 mix-blend-mode:screen;
 
 }
-
-/* LUCES */
 
 .glow{
 
@@ -109,7 +103,6 @@ border-radius:50%;
 filter:blur(90px);
 pointer-events:none;
 opacity:.25;
-
 animation:floatGlow 16s ease-in-out infinite;
 
 }
@@ -159,29 +152,21 @@ scale(1.15);
 
 }
 
-/* CONTENEDOR */
-
 .wrapper{
 
 width:min(930px,92%);
 margin:80px auto;
-
 position:relative;
 
 }
 
-/* CRISTAL */
-
 .frame{
 
 position:relative;
-
 padding:75px 65px;
-
 border-radius:34px;
 
 background:
-
 linear-gradient(rgba(255,255,255,.08),
 rgba(255,255,255,.03));
 
@@ -192,7 +177,6 @@ border:1px solid rgba(255,255,255,.15);
 overflow:hidden;
 
 box-shadow:
-
 0 0 60px rgba(0,0,0,.45),
 0 0 90px rgba(126,170,255,.08);
 
@@ -201,34 +185,22 @@ box-shadow:
 .frame:before{
 
 content:"";
-
 position:absolute;
-
 inset:14px;
-
 border-radius:24px;
-
 border:1px solid rgba(255,255,255,.08);
 
-pointer-events:none;
-
 }
-
-/* DESTELLOS */
 
 .spark{
 
 position:absolute;
-
 width:8px;
 height:8px;
-
 background:white;
-
 border-radius:50%;
 
 box-shadow:
-
 0 0 12px white,
 0 0 25px #fff;
 
@@ -237,48 +209,36 @@ animation:blink 3s infinite;
 }
 
 .spark:nth-child(1){
-
 top:70px;
 left:60px;
-
 }
 
 .spark:nth-child(2){
-
 top:130px;
 right:90px;
 animation-delay:1.4s;
-
 }
 
 .spark:nth-child(3){
-
 bottom:90px;
 left:120px;
 animation-delay:2.3s;
-
 }
 
 .spark:nth-child(4){
-
 bottom:130px;
 right:100px;
 animation-delay:.6s;
-
 }
 
 @keyframes blink{
 
 50%{
-
 opacity:.2;
 transform:scale(.35);
-
 }
 
 }
-
-/* TÍTULO */
 
 .header{
 
@@ -290,13 +250,9 @@ margin-bottom:60px;
 .small{
 
 font-family:'Marcellus',serif;
-
 letter-spacing:7px;
-
 color:#d7d4f6;
-
 font-size:.95rem;
-
 text-transform:uppercase;
 
 }
@@ -304,17 +260,12 @@ text-transform:uppercase;
 .mainTitle{
 
 margin-top:18px;
-
-font-size:3.6rem;
-
+font-size:3.45rem;
 line-height:1.15;
-
 font-weight:600;
-
 color:white;
 
 text-shadow:
-
 0 0 18px rgba(255,255,255,.18);
 
 }
@@ -322,11 +273,11 @@ text-shadow:
 .divider{
 
 margin:32px auto;
-
 width:180px;
 height:2px;
 
-background:linear-gradient(90deg,
+background:
+linear-gradient(90deg,
 transparent,
 #f8deb5,
 white,
@@ -341,69 +292,46 @@ position:relative;
 .divider:after{
 
 content:"✦";
-
 position:absolute;
-
 top:-16px;
-
 color:#ffe6b7;
-
 font-size:1.2rem;
 
 }
 
 .divider:before{
-
 left:-12px;
-
 }
 
 .divider:after{
-
 right:-12px;
-
 }
 
 .date{
 
 font-family:'Marcellus',serif;
-
 font-size:1rem;
-
 letter-spacing:2px;
-
 color:#d9d7e8;
 
 }
 
-/* SALUDO */
-
 .greeting{
 
 font-family:'Great Vibes',cursive;
-
 font-size:2.4rem;
-
 text-align:center;
-
 margin:60px 0 45px;
-
 color:#ffe7c2;
 
 }
 
-/* CONTADOR */
-
 .countdown{
 
 display:flex;
-
 justify-content:center;
-
 gap:18px;
-
 margin-bottom:55px;
-
 flex-wrap:wrap;
 
 }
@@ -412,19 +340,13 @@ flex-wrap:wrap;
 
 width:68px;
 height:82px;
-
 border-radius:18px;
-
 background:rgba(255,255,255,.06);
-
 border:1px solid rgba(255,255,255,.1);
 
 display:flex;
-
 flex-direction:column;
-
 justify-content:center;
-
 align-items:center;
 
 box-shadow:0 0 18px rgba(255,255,255,.04);
@@ -435,7 +357,6 @@ box-shadow:0 0 18px rgba(255,255,255,.04);
 
 font-size:1.9rem;
 font-weight:700;
-
 color:#fff7da;
 
 }
@@ -443,25 +364,17 @@ color:#fff7da;
 .day small{
 
 margin-top:6px;
-
 font-size:.78rem;
-
 letter-spacing:2px;
-
 color:#d4d2df;
-
 text-transform:uppercase;
 
 }
 
-/* TEXTO */
-
 .poem{
 
 font-size:1.43rem;
-
 line-height:2.18;
-
 color:#f6f4ef;
 
 }
@@ -469,7 +382,6 @@ color:#f6f4ef;
 .poem p{
 
 margin-bottom:28px;
-
 text-align:justify;
 
 }
@@ -477,9 +389,7 @@ text-align:justify;
 .poem p:first-letter{
 
 font-size:2rem;
-
 font-weight:bold;
-
 color:#ffe3ba;
 
 }
@@ -494,15 +404,10 @@ font-weight:600;
 .emphasis{
 
 display:block;
-
 text-align:center;
-
 font-size:2rem;
-
 margin:40px 0;
-
 font-family:'Great Vibes',cursive;
-
 color:#ffe2bd;
 
 }
@@ -510,29 +415,20 @@ color:#ffe2bd;
 @media(max-width:768px){
 
 .frame{
-
 padding:45px 28px;
-
 }
 
 .mainTitle{
-
 font-size:2.45rem;
-
 }
 
 .poem{
-
 font-size:1.24rem;
-
 line-height:2;
-
 }
 
 .greeting{
-
 font-size:2rem;
-
 }
 
 }
@@ -561,14 +457,14 @@ font-size:2rem;
 <header class="header">
 
 <div class="small">
-UNA NOCHE • UN CORAZÓN • UNA PROMESA
+UNA NOCHE • UN CORAZÓN • UNA ESPERA
 </div>
 
 <h1 class="mainTitle">
-SI SIETE DÍAS SON EL PRECIO<br>
-DE EXTRAÑARTE,<br>
-LOS CONTARÉ UNO POR UNO<br>
-HASTA VOLVER A BESARTE
+CUANDO EL MUNDO<br>
+SE DETIENE,<br>
+MI CORAZÓN SIGUE<br>
+CAMINANDO HACIA TI
 </h1>
 
 <div class="divider"></div>
@@ -605,232 +501,391 @@ Mi princesa hermosa...
 <section class="poem">
 
 <p>
-Esta noche tiene un sabor extraño. Es una de esas noches en las que pasaron muchas cosas, pero al final todas terminaron recordándome una sola verdad: <strong>que mi felicidad siempre encuentra el camino de regreso hacia ti.</strong>
+Hay noches que parecen escritas por el destino con tinta de nostalgia.
 </p>
 
 <p>
-Hoy el fútbol nos hizo pasar por un carrusel de emociones. Tú querías que Argentina perdiera y durante un buen rato parecía que el destino iba a darte ese gusto, pero el partido cambió en los últimos minutos. Después los dos compartíamos el mismo deseo: ver a Colombia seguir soñando. Los dos queríamos verla ganar. Los dos queríamos celebrar. Los dos queríamos creer.
+No porque les falten estrellas.
+</p>
+
+<p>
+No porque el cielo haya olvidado brillar.
 </p>
 
 <p class="emphasis">
-Pero no fue así...
+Sino porque existe una persona demasiado importante para abrazarla esta noche...
 </p>
 
 <p>
-Y cuando vi que Colombia había quedado eliminada, lo primero que pensé no fue en el resultado... pensé en ti.
+Y esa persona eres tú.
 </p>
 
 <p>
-Recordé cuando dijiste que, si Colombia quedaba fuera del Mundial, ibas a llorar. Entonces te escribí, no porque el partido me preocupara más que tú, sino porque sabía que detrás de esa pantalla estaba la niña que más amo sintiendo un poquito de tristeza.
+Mientras el mundo celebraba, discutía, se ilusionaba y se entristecía por un balón que recorría una cancha, mi corazón jugaba un partido completamente distinto.
 </p>
 
 <p>
-Cuando me respondiste con ese pequeño <strong>"No"</strong>, entendí que tu corazón necesitaba un momento para respirar. Por eso preferí guardar silencio. No porque dejara de pensar en ti, sino porque también amar es saber esperar sin invadir, acompañar incluso desde la distancia y respetar esos minutos en los que el alma necesita acomodar sus emociones.
-  </p>
+Uno donde el único resultado que realmente me importaba era saber cómo estabas tú.
+</p>
 
 <p>
-Y cuando más tarde me dijiste que ya estabas mejor... no tienes idea de lo que pasó conmigo.
+Porque cuando tus ojos se llenan de tristeza, aunque sea por un instante, siento que el universo pierde un poco de su luz.
+</p>
+
+<p>
+No sé cómo explicarlo.
+</p>
+
+<p>
+Simplemente ocurre.
+</p>
+
+<p>
+Tu felicidad tiene la extraña costumbre de convertirse también en la mía.
+</p>
+
+<p>
+Y tus silencios siempre encuentran la manera de hacer eco dentro de mi pecho.
+</p>
+
+<p>
+Por eso, cuando supe que tu corazón estaba un poquito triste, el mío solo quiso quedarse cerca de ti, aunque fuera desde la distancia.
 </p>
 
 <p class="emphasis">
-Fue como si alguien hubiera abierto una ventana después de una tarde gris.
+A veces el amor también sabe esperar en silencio.
 </p>
 
 <p>
-Mi ánimo volvió.
+A veces el amor no consiste en llenar cada segundo de palabras.
 </p>
 
 <p>
-Mi corazón volvió a sonreír.
+A veces consiste en esperar.
 </p>
 
 <p>
-Porque hay algo que jamás voy a poder cambiar: no me gusta imaginarte triste. Ojalá pudiera quedarme con cada una de tus lágrimas antes de que llegaran a tus ojos. Ojalá pudiera convencer al mundo entero de regalarte más motivos para sonreír. Porque cuando tú sonríes, hasta mis días parecen tener más luz.
+En respetar el silencio.
 </p>
 
 <p>
-Y aunque hoy todo eso pasó, hay algo que pesa todavía más sobre mi pecho.
+En quedarse del otro lado, sosteniendo con paciencia una puerta que el otro abrirá cuando vuelva a sentirse listo para sonreír.
+</p>
+
+<p>
+Y cuando esa sonrisa regresó...
 </p>
 
 <p class="emphasis">
-No voy a verte durante seis días y medio.
+También volvió la mía.
 </p>
 
 <p>
-Seis días y medio pueden parecer muy pocos para algunas personas.
+Porque eres la única persona capaz de convertir un día gris en un lugar donde todavía vale la pena quedarse.
 </p>
 
 <p>
-<strong>Para mí...</strong>
+Sin darte cuenta, tienes ese poder.
+</p>
+
+<p>
+No porque hagas magia.
+</p>
+
+<p>
+Sino porque desde hace mucho tiempo te convertiste en el hogar donde descansan todas mis emociones.
 </p>
 
 <p class="emphasis">
-Se sienten como una eternidad.
+Y ahora comienza una espera...
 </p>
 
 <p>
-Hoy estuvimos juntos, pero cuando llegó el momento de despedirnos, nuestros labios no se encontraron.
+Siete días.
 </p>
 
 <p>
-Y ahora no puedo dejar de pensar en eso.
+Siete amaneceres.
 </p>
 
 <p>
-Me duele saber que pasarán siete días antes de poder volver a sentir un beso tuyo.
+Siete noches.
 </p>
 
 <p>
-Siete días antes de abrazarte.
+Siete oportunidades para descubrir que el amor también sabe sobrevivir cuando los abrazos deben esperar.
 </p>
 
 <p>
-Siete días antes de volver a esconderme en ese lugar donde siempre encuentro paz: <strong>entre tus brazos.</strong>
+Confieso que me asusta un poco.
 </p>
 
 <p>
-Extraño tus ojos incluso cuando todavía recuerdo perfectamente cómo brillan.
-</p>
-
-<p>
-Extraño tu voz aunque todavía resuena en mi cabeza.
-</p>
-
-<p>
-Extraño tu risa aunque hace apenas unas horas la escuché.
-</p>
-
-<p>
-Y, sobre todo, extraño unos labios que todavía no he dejado de amar ni un solo segundo.
+No por dejar de amarte.
 </p>
 
 <p class="emphasis">
-Si pudiera pedirle algo al tiempo...
+Eso jamás.
 </p>
 
 <p>
-No sería riqueza, ni suerte, ni nada extraordinario.
+Me asusta despertar y no poder encontrarte.
 </p>
 
 <p>
-Solo le pediría que corriera un poquito más rápido.
+Mirar hacia donde siempre estás y descubrir solamente la distancia.
 </p>
 
 <p>
-Que adelantara los amaneceres.
+Sentir que mis manos recuerdan perfectamente cómo sostener las tuyas, pero no pueden hacerlo todavía.
 </p>
 
 <p>
-Que acortara las noches.
+Hoy ocurrió algo que quizá para muchas personas habría pasado desapercibido.
 </p>
 
 <p>
-Que borrara los días del calendario hasta devolverme el instante en el que vuelva a tenerte frente a mí.
-</p>
-
-<p>
-Porque no existe lugar donde prefiera estar que contigo.
-</p>
-
-<p>
-No existe abrazo que se compare con el tuyo.
-</p>
-
-<p>
-No existe refugio más bonito que sentir tu corazón cerca del mío.
-</p>
-
-<p>
-Y mientras esos días pasan, voy a seguir haciendo lo que mejor sabe hacer mi corazón: esperarte.
-</p>
-
-<p>
-Esperarte con la misma ilusión con la que un niño espera la Navidad.
-</p>
-
-<p>
-Esperarte con la misma certeza con la que cada noche espera a las estrellas.
-</p>
-
-<p>
-Esperarte con un amor que no disminuye cuando la distancia aparece, sino que crece todavía más.
+Pero para mí quedó guardado en un rincón muy profundo del alma.
 </p>
 
 <p class="emphasis">
-Porque el verdadero amor jamás aprende a rendirse.
+Nuestros labios no se encontraron antes de despedirnos.
 </p>
 
 <p>
-Quiero que cuando vuelvas a leer estas palabras recuerdes algo muy importante.
+Y desde entonces llevo la extraña sensación de haber dejado una canción incompleta.
 </p>
 
 <p>
-Hoy el fútbol nos regaló alegrías, decepciones, nervios y tristeza.
+Como si el último verso hubiera decidido esperar algunos días más para ser pronunciado.
 </p>
 
 <p>
-Pero ninguna de esas emociones fue más fuerte que el amor inmenso que siento por ti.
+No imaginaba que un beso pudiera hacer tanta falta incluso antes de convertirse en recuerdo.
 </p>
 
 <p>
-Porque los partidos terminan.
+Ahora entiendo que los besos también tienen memoria.
 </p>
 
 <p>
-Los resultados cambian.
+Y los míos no dejan de buscar el camino que conduce hasta ti.
 </p>
 
 <p>
-Las copas encuentran nuevos dueños.
+Extraño el brillo tranquilo de tus ojos cuando me miras.
 </p>
 
 <p>
-Pero lo que siento por ti permanece.
+Extraño la paz que aparece cada vez que nuestras manos se encuentran sin necesidad de decir una sola palabra.
 </p>
 
 <p>
-Y permanece porque no nació de un momento de emoción, sino de la decisión más bonita que ha tomado mi corazón: <strong>elegirte todos los días.</strong>
-</p>
-
-<p>
-Así que, mi niña hermosa, aunque esta noche termine con un poquito de nostalgia y con muchas ganas de besarte, también termina con una promesa.
+Extraño la forma en que el tiempo parece detenerse cuando estoy contigo, como si el mundo entendiera que existen momentos demasiado hermosos para tener prisa.
 </p>
 
 <p class="emphasis">
-Cuando vuelvas a estar frente a mí...
+La distancia no debilita el amor...
+<br>
+Lo vuelve imposible de esconder.
 </p>
 
 <p>
-Quiero abrazarte como si esos siete días nunca hubieran existido.
+Dicen que la distancia pone a prueba los sentimientos.
 </p>
 
 <p>
-Quiero mirarte a los ojos hasta olvidarme del tiempo.
+Yo creo otra cosa.
 </p>
 
 <p>
-Quiero recuperar en un solo beso todos los besos que las vacaciones nos robaron.
+Creo que la distancia solamente revela aquello que ya era inmenso desde el principio.
 </p>
 
 <p>
-Y quiero que sientas, una vez más, que sin importar cuántos días nos separen, siempre habrá un corazón que late con fuerza solo porque tú existes.
+Porque mientras más lejos estás, más claro comprendo que no hay un solo rincón de mi vida donde tú no estés presente.
+</p>
+
+<p>
+Habitas mis pensamientos cuando despierto.
+</p>
+
+<p>
+Apareces entre mis sonrisas sin que nadie pronuncie tu nombre.
+</p>
+
+<p>
+Te encuentro escondida en las canciones.
+</p>
+
+<p>
+En las noches silenciosas.
+</p>
+
+<p>
+En los atardeceres.
+</p>
+
+<p>
+En las estrellas.
+</p>
+
+<p>
+En los pequeños detalles que antes parecían normales y que ahora llevan inevitablemente tu recuerdo.
+</p>
+
+<p>
+Eres esa costumbre bonita que jamás quisiera perder.
+</p>
+
+<p>
+Eres el lugar donde siempre descansa mi tranquilidad.
+</p>
+
+<p>
+Eres el abrazo que mi corazón imagina incluso cuando mis brazos están vacíos.
 </p>
 
 <p class="emphasis">
-Te extraño muchísimo.<br>
-Te pienso muchísimo.
+Si pudiera hacer un trato con el tiempo...
 </p>
 
 <p>
-Y esta noche, más que nunca, te amo con toda mi alma, con toda mi vida y con todo lo que soy.
+No le pediría que borrara los días.
 </p>
 
 <p>
-Porque si hay algo que ni el tiempo, ni la distancia, ni un partido de fútbol podrán cambiar jamás...
+Le pediría que cuidara de ti mientras yo no puedo hacerlo.
+</p>
+
+<p>
+Que cada amanecer te regalara un motivo para sonreír.
+</p>
+
+<p>
+Que cada noche abrazara tus sueños con la misma ternura con la que yo abrazaría tus manos.
+</p>
+
+<p>
+Que ninguna tristeza permaneciera demasiado tiempo cerca de ti.
+</p>
+
+<p>
+Porque, si algún deseo tengo, es que la vida sea inmensamente buena contigo.
 </p>
 
 <p class="emphasis">
-Es que tú seguirás siendo el lugar más hermoso donde mi corazón siempre querrá volver.
+Y cuando finalmente termine esta espera...
+</p>
+
+<p>
+No quiero recuperar solamente los días.
+</p>
+
+<p>
+Quiero recuperar los abrazos que quedaron pendientes.
+</p>
+
+<p>
+Las miradas que todavía no nos hemos regalado.
+</p>
+
+<p>
+Las sonrisas que siguen esperándonos.
+</p>
+
+<p>
+Los besos que el destino decidió guardar para después.
+</p>
+
+<p>
+Quiero abrazarte tan despacio que el tiempo olvide seguir avanzando.
+</p>
+
+<p>
+Quiero mirarte con la misma emoción con la que un viajero contempla por fin el lugar con el que soñó durante tanto tiempo.
+</p>
+
+<p>
+Quiero volver a sentir que el mundo desaparece cuando tus ojos encuentran los míos.
+</p>
+
+<p class="emphasis">
+Porque esa siempre ha sido mi forma favorita de existir.
+</p>
+
+<p>
+Dentro de tu mirada.
+</p>
+
+<p>
+Cerca de tu corazón.
+</p>
+
+<p>
+Entre el calor de tus brazos.
+</p>
+
+<p>
+Y al refugio de tu amor.
+</p>
+
+<p>
+Hasta entonces, contaré los días no con tristeza, sino con esperanza.
+</p>
+
+<p>
+Porque cada amanecer que pase será uno menos para volver a ti.
+</p>
+
+<p>
+Cada noche será una estrella más iluminando nuestro reencuentro.
+</p>
+
+<p>
+Cada minuto será un paso silencioso acercándome nuevamente al momento en que pueda decirte, sin prisas y mirándote a los ojos, cuánto te he extrañado.
+</p>
+
+<p class="emphasis">
+Y cuando ese instante llegue...
+</p>
+
+<p>
+No hablarán primero mis labios.
+</p>
+
+<p>
+Hablará mi abrazo.
+</p>
+
+<p>
+Hablarán mis ojos.
+</p>
+
+<p>
+Hablará el latido desesperado de un corazón que jamás dejó de caminar hacia ti, ni siquiera cuando el calendario quiso separarnos.
+</p>
+
+<p>
+Porque podrán pasar siete días.
+</p>
+
+<p>
+Podrán pasar siete noches.
+</p>
+
+<p>
+Podrán existir miles de kilómetros o un mundo entero entre nosotros.
+</p>
+
+<p>
+Pero nunca existirá una distancia capaz de hacer que mi amor deje de encontrarte.
+</p>
+
+<p class="emphasis">
+Porque, incluso cuando el mundo parece detenerse...
+<br><br>
+Mi corazón siempre sabe el camino de regreso hacia ti.
 </p>
 
 </section>
@@ -839,20 +894,20 @@ Es que tú seguirás siendo el lugar más hermoso donde mi corazón siempre quer
 
 <div style="
 display:inline-block;
-padding:22px 34px;
+padding:24px 36px;
 border-radius:22px;
 background:linear-gradient(135deg,rgba(255,245,215,.08),rgba(255,255,255,.03));
 border:1px solid rgba(255,255,255,.14);
 box-shadow:0 0 35px rgba(255,225,180,.12);
-max-width:650px;">
+max-width:670px;">
 
 <div style="
 font-family:'Great Vibes',cursive;
 font-size:2.3rem;
 color:#ffe6bf;
-margin-bottom:12px;">
+margin-bottom:14px;">
 
-✦ Promesa Bajo Las Estrellas ✦
+✦ Hasta Que Mis Brazos Vuelvan A Encontrarte ✦
 
 </div>
 
@@ -861,12 +916,16 @@ font-size:1.25rem;
 line-height:2;
 color:#f5f3ef;">
 
-Contaré cada amanecer como quien guarda un pétalo,
-esperaré cada noche como quien observa la estrella
-que siempre regresa al mismo cielo,
-y cuando al fin vuelva a tenerte frente a mí,
-haré que un solo abrazo
-valga por todos los que las vacaciones nos impidieron vivir.
+Si la distancia decidió quedarse unos días entre nosotros,
+yo elegiré convertir cada uno de ellos en una promesa.
+
+Promesa de seguir amándote.
+
+Promesa de seguir soñando contigo.
+
+Promesa de volver a abrazarte con más fuerza que nunca,
+hasta que esos siete días se conviertan únicamente
+en un recuerdo pequeño frente a un amor inmenso.
 
 </p>
 
@@ -904,7 +963,8 @@ font-family:'Marcellus',serif;
 font-size:.92rem;
 color:#d6d4df;">
 
-PARA LA NIÑA MÁS HERMOSA QUE HABITA MI CORAZÓN
+PARA LA MUJER QUE HACE QUE CADA LATIDO
+SIEMPRE ENCUENTRE EL CAMINO HACIA CASA
 
 </div>
 

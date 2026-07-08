@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Si Siete Días Son El Precio De Extrañarte</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Marcellus&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:
+radial-gradient(circle at 20% 20%,rgba(120,160,255,.12),transparent 35%),
+radial-gradient(circle at 80% 10%,rgba(255,220,170,.08),transparent 32%),
+radial-gradient(circle at 50% 90%,rgba(180,120,255,.08),transparent 42%),
+linear-gradient(180deg,#060814,#0b1121,#141c33,#090d18);
+
+overflow-x:hidden;
+font-family:'Cormorant Garamond',serif;
+color:#f5f3ef;
+}
+
+/* ESTRELLAS */
+
+body:before{
+
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+background-image:
+
+radial-gradient(white 1px,transparent 1px),
+radial-gradient(rgba(255,255,255,.75) .8px,transparent .8px),
+radial-gradient(rgba(255,240,210,.9) 1px,transparent 1px);
+
+background-size:
+180px 180px,
+250px 250px,
+320px 320px;
+
+background-position:
+0 0,
+60px 120px,
+120px 40px;
+
+opacity:.55;
+
+animation:starsMove 80s linear infinite;
+
+}
+
+@keyframes starsMove{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-220px);
+}
+
+}
+
+/* CONSTELACIONES */
+
+.constellation{
+
+position:fixed;
+inset:0;
+pointer-events:none;
+opacity:.15;
+
+background-image:
+
+linear-gradient(45deg,transparent 49.7%,rgba(255,255,255,.8)50%,transparent 50.3%),
+linear-gradient(-45deg,transparent 49.7%,rgba(255,255,255,.5)50%,transparent 50.3%);
+
+background-size:320px 320px;
+
+mix-blend-mode:screen;
+
+}
+
+/* LUCES */
+
+.glow{
+
+position:fixed;
+border-radius:50%;
+filter:blur(90px);
+pointer-events:none;
+opacity:.25;
+
+animation:floatGlow 16s ease-in-out infinite;
+
+}
+
+.g1{
+
+width:320px;
+height:320px;
+background:#6d8dff;
+top:-80px;
+left:-70px;
+
+}
+
+.g2{
+
+width:260px;
+height:260px;
+background:#f2bfff;
+bottom:-70px;
+right:-50px;
+animation-delay:4s;
+
+}
+
+.g3{
+
+width:240px;
+height:240px;
+background:#ffdca8;
+top:45%;
+left:72%;
+animation-delay:8s;
+
+}
+
+@keyframes floatGlow{
+
+50%{
+
+transform:
+translateY(-35px)
+translateX(18px)
+scale(1.15);
+
+}
+
+}
+
+/* CONTENEDOR */
+
+.wrapper{
+
+width:min(930px,92%);
+margin:80px auto;
+
+position:relative;
+
+}
+
+/* CRISTAL */
+
+.frame{
+
+position:relative;
+
+padding:75px 65px;
+
+border-radius:34px;
+
+background:
+
+linear-gradient(rgba(255,255,255,.08),
+rgba(255,255,255,.03));
+
+backdrop-filter:blur(16px);
+
+border:1px solid rgba(255,255,255,.15);
+
+overflow:hidden;
+
+box-shadow:
+
+0 0 60px rgba(0,0,0,.45),
+0 0 90px rgba(126,170,255,.08);
+
+}
+
+.frame:before{
+
+content:"";
+
+position:absolute;
+
+inset:14px;
+
+border-radius:24px;
+
+border:1px solid rgba(255,255,255,.08);
+
+pointer-events:none;
+
+}
+
+/* DESTELLOS */
+
+.spark{
+
+position:absolute;
+
+width:8px;
+height:8px;
+
+background:white;
+
+border-radius:50%;
+
+box-shadow:
+
+0 0 12px white,
+0 0 25px #fff;
+
+animation:blink 3s infinite;
+
+}
+
+.spark:nth-child(1){
+
+top:70px;
+left:60px;
+
+}
+
+.spark:nth-child(2){
+
+top:130px;
+right:90px;
+animation-delay:1.4s;
+
+}
+
+.spark:nth-child(3){
+
+bottom:90px;
+left:120px;
+animation-delay:2.3s;
+
+}
+
+.spark:nth-child(4){
+
+bottom:130px;
+right:100px;
+animation-delay:.6s;
+
+}
+
+@keyframes blink{
+
+50%{
+
+opacity:.2;
+transform:scale(.35);
+
+}
+
+}
+
+/* TÍTULO */
+
+.header{
+
+text-align:center;
+margin-bottom:60px;
+
+}
+
+.small{
+
+font-family:'Marcellus',serif;
+
+letter-spacing:7px;
+
+color:#d7d4f6;
+
+font-size:.95rem;
+
+text-transform:uppercase;
+
+}
+
+.mainTitle{
+
+margin-top:18px;
+
+font-size:3.6rem;
+
+line-height:1.15;
+
+font-weight:600;
+
+color:white;
+
+text-shadow:
+
+0 0 18px rgba(255,255,255,.18);
+
+}
+
+.divider{
+
+margin:32px auto;
+
+width:180px;
+height:2px;
+
+background:linear-gradient(90deg,
+transparent,
+#f8deb5,
+white,
+#f8deb5,
+transparent);
+
+position:relative;
+
+}
+
+.divider:before,
+.divider:after{
+
+content:"✦";
+
+position:absolute;
+
+top:-16px;
+
+color:#ffe6b7;
+
+font-size:1.2rem;
+
+}
+
+.divider:before{
+
+left:-12px;
+
+}
+
+.divider:after{
+
+right:-12px;
+
+}
+
+.date{
+
+font-family:'Marcellus',serif;
+
+font-size:1rem;
+
+letter-spacing:2px;
+
+color:#d9d7e8;
+
+}
+
+/* SALUDO */
+
+.greeting{
+
+font-family:'Great Vibes',cursive;
+
+font-size:2.4rem;
+
+text-align:center;
+
+margin:60px 0 45px;
+
+color:#ffe7c2;
+
+}
+
+/* CONTADOR */
+
+.countdown{
+
+display:flex;
+
+justify-content:center;
+
+gap:18px;
+
+margin-bottom:55px;
+
+flex-wrap:wrap;
+
+}
+
+.day{
+
+width:68px;
+height:82px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.1);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+box-shadow:0 0 18px rgba(255,255,255,.04);
+
+}
+
+.day span{
+
+font-size:1.9rem;
+font-weight:700;
+
+color:#fff7da;
+
+}
+
+.day small{
+
+margin-top:6px;
+
+font-size:.78rem;
+
+letter-spacing:2px;
+
+color:#d4d2df;
+
+text-transform:uppercase;
+
+}
+
+/* TEXTO */
+
+.poem{
+
+font-size:1.43rem;
+
+line-height:2.18;
+
+color:#f6f4ef;
+
+}
+
+.poem p{
+
+margin-bottom:28px;
+
+text-align:justify;
+
+}
+
+.poem p:first-letter{
+
+font-size:2rem;
+
+font-weight:bold;
+
+color:#ffe3ba;
+
+}
+
+strong{
+
+color:#fff0c8;
+font-weight:600;
+
+}
+
+.emphasis{
+
+display:block;
+
+text-align:center;
+
+font-size:2rem;
+
+margin:40px 0;
+
+font-family:'Great Vibes',cursive;
+
+color:#ffe2bd;
+
+}
+
+@media(max-width:768px){
+
+.frame{
+
+padding:45px 28px;
+
+}
+
+.mainTitle{
+
+font-size:2.45rem;
+
+}
+
+.poem{
+
+font-size:1.24rem;
+
+line-height:2;
+
+}
+
+.greeting{
+
+font-size:2rem;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="constellation"></div>
+
+<div class="glow g1"></div>
+<div class="glow g2"></div>
+<div class="glow g3"></div>
+
+<div class="wrapper">
+
+<div class="frame">
+
+<div class="spark"></div>
+<div class="spark"></div>
+<div class="spark"></div>
+<div class="spark"></div>
+
+<header class="header">
+
+<div class="small">
+UNA NOCHE • UN CORAZÓN • UNA PROMESA
+</div>
+
+<h1 class="mainTitle">
+SI SIETE DÍAS SON EL PRECIO<br>
+DE EXTRAÑARTE,<br>
+LOS CONTARÉ UNO POR UNO<br>
+HASTA VOLVER A BESARTE
+</h1>
+
+<div class="divider"></div>
+
+<div class="date">
+MARTES, 7 DE JULIO DE 2026 — NOCHE
+</div>
+
+</header>
+
+<div class="greeting">
+Mi princesa hermosa...
+</div>
+
+<div class="countdown">
+
+<div class="day">
+<span>7</span>
+<small>Días</small>
+</div>
+
+<div class="day">
+<span>❤</span>
+<small>Amor</small>
+</div>
+
+<div class="day">
+<span>∞</span>
+<small>Siempre</small>
+</div>
+
+</div>
+
+<section class="poem">
+
+<p>
+Esta noche tiene un sabor extraño. Es una de esas noches en las que pasaron muchas cosas, pero al final todas terminaron recordándome una sola verdad: <strong>que mi felicidad siempre encuentra el camino de regreso hacia ti.</strong>
+</p>
+
+<p>
+Hoy el fútbol nos hizo pasar por un carrusel de emociones. Tú querías que Argentina perdiera y durante un buen rato parecía que el destino iba a darte ese gusto, pero el partido cambió en los últimos minutos. Después los dos compartíamos el mismo deseo: ver a Colombia seguir soñando. Los dos queríamos verla ganar. Los dos queríamos celebrar. Los dos queríamos creer.
+</p>
+
+<p class="emphasis">
+Pero no fue así...
+</p>
+
+<p>
+Y cuando vi que Colombia había quedado eliminada, lo primero que pensé no fue en el resultado... pensé en ti.
+</p>
+
+<p>
+Recordé cuando dijiste que, si Colombia quedaba fuera del Mundial, ibas a llorar. Entonces te escribí, no porque el partido me preocupara más que tú, sino porque sabía que detrás de esa pantalla estaba la niña que más amo sintiendo un poquito de tristeza.
+</p>
+
+<p>
+Cuando me respondiste con ese pequeño <strong>"No"</strong>, entendí que tu corazón necesitaba un momento para respirar. Por eso preferí guardar silencio. No porque dejara de pensar en ti, sino porque también amar es saber esperar sin invadir, acompañar incluso desde la distancia y respetar esos minutos en los que el alma necesita acomodar sus emociones.
+  </p>
+
+<p>
+Y cuando más tarde me dijiste que ya estabas mejor... no tienes idea de lo que pasó conmigo.
+</p>
+
+<p class="emphasis">
+Fue como si alguien hubiera abierto una ventana después de una tarde gris.
+</p>
+
+<p>
+Mi ánimo volvió.
+</p>
+
+<p>
+Mi corazón volvió a sonreír.
+</p>
+
+<p>
+Porque hay algo que jamás voy a poder cambiar: no me gusta imaginarte triste. Ojalá pudiera quedarme con cada una de tus lágrimas antes de que llegaran a tus ojos. Ojalá pudiera convencer al mundo entero de regalarte más motivos para sonreír. Porque cuando tú sonríes, hasta mis días parecen tener más luz.
+</p>
+
+<p>
+Y aunque hoy todo eso pasó, hay algo que pesa todavía más sobre mi pecho.
+</p>
+
+<p class="emphasis">
+No voy a verte durante seis días y medio.
+</p>
+
+<p>
+Seis días y medio pueden parecer muy pocos para algunas personas.
+</p>
+
+<p>
+<strong>Para mí...</strong>
+</p>
+
+<p class="emphasis">
+Se sienten como una eternidad.
+</p>
+
+<p>
+Hoy estuvimos juntos, pero cuando llegó el momento de despedirnos, nuestros labios no se encontraron.
+</p>
+
+<p>
+Y ahora no puedo dejar de pensar en eso.
+</p>
+
+<p>
+Me duele saber que pasarán siete días antes de poder volver a sentir un beso tuyo.
+</p>
+
+<p>
+Siete días antes de abrazarte.
+</p>
+
+<p>
+Siete días antes de volver a esconderme en ese lugar donde siempre encuentro paz: <strong>entre tus brazos.</strong>
+</p>
+
+<p>
+Extraño tus ojos incluso cuando todavía recuerdo perfectamente cómo brillan.
+</p>
+
+<p>
+Extraño tu voz aunque todavía resuena en mi cabeza.
+</p>
+
+<p>
+Extraño tu risa aunque hace apenas unas horas la escuché.
+</p>
+
+<p>
+Y, sobre todo, extraño unos labios que todavía no he dejado de amar ni un solo segundo.
+</p>
+
+<p class="emphasis">
+Si pudiera pedirle algo al tiempo...
+</p>
+
+<p>
+No sería riqueza, ni suerte, ni nada extraordinario.
+</p>
+
+<p>
+Solo le pediría que corriera un poquito más rápido.
+</p>
+
+<p>
+Que adelantara los amaneceres.
+</p>
+
+<p>
+Que acortara las noches.
+</p>
+
+<p>
+Que borrara los días del calendario hasta devolverme el instante en el que vuelva a tenerte frente a mí.
+</p>
+
+<p>
+Porque no existe lugar donde prefiera estar que contigo.
+</p>
+
+<p>
+No existe abrazo que se compare con el tuyo.
+</p>
+
+<p>
+No existe refugio más bonito que sentir tu corazón cerca del mío.
+</p>
+
+<p>
+Y mientras esos días pasan, voy a seguir haciendo lo que mejor sabe hacer mi corazón: esperarte.
+</p>
+
+<p>
+Esperarte con la misma ilusión con la que un niño espera la Navidad.
+</p>
+
+<p>
+Esperarte con la misma certeza con la que cada noche espera a las estrellas.
+</p>
+
+<p>
+Esperarte con un amor que no disminuye cuando la distancia aparece, sino que crece todavía más.
+</p>
+
+<p class="emphasis">
+Porque el verdadero amor jamás aprende a rendirse.
+</p>
+
+<p>
+Quiero que cuando vuelvas a leer estas palabras recuerdes algo muy importante.
+</p>
+
+<p>
+Hoy el fútbol nos regaló alegrías, decepciones, nervios y tristeza.
+</p>
+
+<p>
+Pero ninguna de esas emociones fue más fuerte que el amor inmenso que siento por ti.
+</p>
+
+<p>
+Porque los partidos terminan.
+</p>
+
+<p>
+Los resultados cambian.
+</p>
+
+<p>
+Las copas encuentran nuevos dueños.
+</p>
+
+<p>
+Pero lo que siento por ti permanece.
+</p>
+
+<p>
+Y permanece porque no nació de un momento de emoción, sino de la decisión más bonita que ha tomado mi corazón: <strong>elegirte todos los días.</strong>
+</p>
+
+<p>
+Así que, mi niña hermosa, aunque esta noche termine con un poquito de nostalgia y con muchas ganas de besarte, también termina con una promesa.
+</p>
+
+<p class="emphasis">
+Cuando vuelvas a estar frente a mí...
+</p>
+
+<p>
+Quiero abrazarte como si esos siete días nunca hubieran existido.
+</p>
+
+<p>
+Quiero mirarte a los ojos hasta olvidarme del tiempo.
+</p>
+
+<p>
+Quiero recuperar en un solo beso todos los besos que las vacaciones nos robaron.
+</p>
+
+<p>
+Y quiero que sientas, una vez más, que sin importar cuántos días nos separen, siempre habrá un corazón que late con fuerza solo porque tú existes.
+</p>
+
+<p class="emphasis">
+Te extraño muchísimo.<br>
+Te pienso muchísimo.
+</p>
+
+<p>
+Y esta noche, más que nunca, te amo con toda mi alma, con toda mi vida y con todo lo que soy.
+</p>
+
+<p>
+Porque si hay algo que ni el tiempo, ni la distancia, ni un partido de fútbol podrán cambiar jamás...
+</p>
+
+<p class="emphasis">
+Es que tú seguirás siendo el lugar más hermoso donde mi corazón siempre querrá volver.
+</p>
+
+</section>
+
+<div style="margin-top:70px;text-align:center;">
+
+<div style="
+display:inline-block;
+padding:22px 34px;
+border-radius:22px;
+background:linear-gradient(135deg,rgba(255,245,215,.08),rgba(255,255,255,.03));
+border:1px solid rgba(255,255,255,.14);
+box-shadow:0 0 35px rgba(255,225,180,.12);
+max-width:650px;">
+
+<div style="
+font-family:'Great Vibes',cursive;
+font-size:2.3rem;
+color:#ffe6bf;
+margin-bottom:12px;">
+
+✦ Promesa Bajo Las Estrellas ✦
+
+</div>
+
+<p style="
+font-size:1.25rem;
+line-height:2;
+color:#f5f3ef;">
+
+Contaré cada amanecer como quien guarda un pétalo,
+esperaré cada noche como quien observa la estrella
+que siempre regresa al mismo cielo,
+y cuando al fin vuelva a tenerte frente a mí,
+haré que un solo abrazo
+valga por todos los que las vacaciones nos impidieron vivir.
+
+</p>
+
+</div>
+
+</div>
+
+<footer style="margin-top:75px;text-align:center;">
+
+<div style="
+width:220px;
+height:2px;
+margin:0 auto 28px;
+background:linear-gradient(90deg,
+transparent,
+#ffe0b3,
+white,
+#ffe0b3,
+transparent);">
+</div>
+
+<div style="
+font-family:'Great Vibes',cursive;
+font-size:2.7rem;
+color:#ffe7c5;">
+
+Con todo mi amor...
+
+</div>
+
+<div style="
+margin-top:16px;
+letter-spacing:4px;
+font-family:'Marcellus',serif;
+font-size:.92rem;
+color:#d6d4df;">
+
+PARA LA NIÑA MÁS HERMOSA QUE HABITA MI CORAZÓN
+
+</div>
+
+</footer>
+
+</div>
+
+</div>
+
+</body>
+</html>
